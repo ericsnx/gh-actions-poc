@@ -40,6 +40,6 @@ jobs:
 
     steps:
       - name: Deploy
-        run: echo "Build ${{ matrix.name }} start to deploy service > ${{ matrix.service }}"
+        run: echo "Build branch ${{ env.GITHUB_WORKSPACE }} ${{ matrix.name }} start to deploy service > ${{ matrix.service }}"
       - name: Manifest
         run: echo "Build ${{ matrix.name }} start to deploy service > ${{ matrix.service }}"
