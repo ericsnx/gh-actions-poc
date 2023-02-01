@@ -41,6 +41,8 @@ jobs:
     steps:
       - name: Checkout
       - uses: action/checkout@v3
+        with:
+          ref: main
       - name: Deploy
         run: echo "Branch {{ github.ref }}, Build service ${{ matrix.name }} start to deploy service > ${{ matrix.service }}"
       - name: Manifest
