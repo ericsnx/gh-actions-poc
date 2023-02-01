@@ -1,5 +1,8 @@
 name: Poc
 
+env:
+  SERVICE_PREFIX: api-v2
+
 on:
   workflow_dispatch:
     inputs:
@@ -16,7 +19,7 @@ jobs:
       matrix:
         include:
           - name: ${{ github.event.inputs.service-name }}
-            service: api-v2-${{ github.event.inputs.service-name }}
+            service: ${{ env.SERVICE_PREFIX }}-${{ github.event.inputs.service-name }}
 
     runs-on: ubuntu-latest
 
