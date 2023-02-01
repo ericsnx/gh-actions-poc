@@ -42,6 +42,6 @@ jobs:
       - name: Checkout
       - uses: action/checkout@v3
       - name: Deploy
-        run: echo "Branch {{ github.repository }}, Build service ${{ matrix.name }} start to deploy service > ${{ matrix.service }}"
+        run: echo "Branch {{ github.ref }}, Build service ${{ matrix.name }} start to deploy service > ${{ matrix.service }}"
       - name: Manifest
         run: echo "Build ${{ matrix.name }} start to deploy service > ${{ matrix.service }}"
