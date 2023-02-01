@@ -14,7 +14,7 @@ on:
           - service-b
 jobs:
   build:
-    name: This is staging code Build ${{ matrix.name }}
+    name: Build ${{ matrix.name }}
     strategy:
       matrix:
         include:
